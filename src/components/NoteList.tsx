@@ -10,7 +10,7 @@ export function Notelist({ notes, onDelete }: NoteListProps) {
     return <p className="text-gray-500">No notes found</p>;
   }
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col gap-3">
       {notes.map((note) => (
         <NoteItem key={note.id} note={note} onDelete={onDelete} />
       ))}

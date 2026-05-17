@@ -6,7 +6,7 @@ export function getNoteDataFromStorage(): Note[] {
     const rawData = localStorage.getItem(NOTE_KEY);
     if (!rawData) return [];
     const parse = JSON.parse(rawData);
-    return parse ? parse : [];
+    return Array.isArray(parse) ? parse : [];
   } catch {
     return [];
   }

@@ -13,11 +13,12 @@ export function AddNoteModal({ onAdd, onClose }: AddNoteModalProps) {
     onClose();
   };
   return (
-    <div className="fixed  flex justify-center items-center bg-black/30 inset-0">
+    <div className="fixed flex justify-center items-center bg-black/30 inset-0">
       <div className="rounded-lg p-4 bg-white">
         <h1 className="font-bold text-2xl pb-4">Add new note</h1>
         <div className="flex flex-col gap-2">
           <input
+            autoComplete="true"
             aria-label="title"
             className="focus:outline-none focus:ring-2 focus:border-yellow-200  px-3 py-2 rounded-lg border border-gray-300 text-sm placeholder:text-gray-400 w-full transition-all duration-100"
             value={title}
